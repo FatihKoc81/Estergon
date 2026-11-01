@@ -2,6 +2,18 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<!-- ESKİ ESTERGON -> YENİ ARENA YÖNLENDİRMESİ. Adres farklıysa sadece YENI satırını değiştir. -->
+<script>
+(function () {
+  var YENI = "https://fatihkoc81.github.io/Arena/";
+  try {
+    var eski = localStorage.getItem("bilgiArenasi");
+    if (eski && !localStorage.getItem("beyinFirtinasi")) localStorage.setItem("beyinFirtinasi", eski); // aynı alan adındaysa ilerleme taşınır
+  } catch (e) {}
+  location.replace(YENI + location.search + location.hash);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0;url=https://fatihkoc81.github.io/Arena/"></noscript>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="only light">
 <meta name="supported-color-schemes" content="light">
